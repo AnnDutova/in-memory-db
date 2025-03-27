@@ -1,9 +1,10 @@
-name: HW tests
+name: tests
 
-on: [ push ]
+on: [push, pull_request]
 
 jobs:
-  lint:
+  in-memory:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - name: set up Go
